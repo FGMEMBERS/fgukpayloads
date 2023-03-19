@@ -5,6 +5,29 @@
  <offsets>
    <pitch-deg>90</pitch-deg>
  </offsets>
+ 
+ 	<nasal>
+      <load>
+        var self = cmdarg();
+       
+		var int_1 = self.getNode("sim/multiplay/generic/int[1]", 1);
+
+		
+		  var para = self.getNode("instrumentation/paras/trigger", 1);
+		 
+		 para.alias(int_1);
+		
+		 
+		 
+
+
+      </load>
+      <unload>
+         
+     para.unalias();
+      </unload>
+   </nasal>		
+ 
 
 <!-- EXTRACT -->
  <animation>
